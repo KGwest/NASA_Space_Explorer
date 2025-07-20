@@ -62,7 +62,27 @@ function renderGallery(items) {
 
 function openModal(item) {
   const modal = document.getElementById("modal");
-  document.getElementById("modal-img").src = item.url;
+  const mediaContainer = document.getElementById("modal-media");
+  mediaContainer.innerHTML = ""; // Clear previous media
+
+  if (item.media_type === "image") {
+    const img = document.createElement("img");
+    img.src = item.url;
+    img.alt = item.title;
+    img.style.width = "100%";
+    img.style.borderRadius = "4px";
+    mediaContainer.appendChild(img);
+  } else if (item.media_type === "video") {
+    const iframe = document.createElement("iframe");
+    iframe.src = item.url;
+    iframe.frameBorder = "0";
+    iframe.allowFullscreen = true;
+    iframe.style.width = "100%";
+    iframe.style.aspectRatio = "16/9";
+    iframe.style.borderRadius = "4px";
+    mediaContainer.appendChild(iframe);
+  }
+
   document.getElementById("modal-title").textContent = item.title;
   document.getElementById("modal-date").textContent = item.date;
   document.getElementById("modal-explanation").textContent = item.explanation;

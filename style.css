@@ -251,3 +251,12 @@ button:hover {
   color: #333;
   text-decoration: underline;
 }
+
+#modal-media {
+  margin-bottom: 15px;
+}
+
+#modal-media iframe {
+  max-width: 100%;
+  height: auto;
+}
