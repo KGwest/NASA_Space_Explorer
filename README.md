@@ -18,16 +18,17 @@ The **NASA Space Explorer** is a dynamic web application that connects users wit
 - DOM manipulation and dynamic rendering
 
 ### Project Structure
-
- NASA-Space-Explorer/
+```
+NASA-Space-Explorer/
 ├── index.html
 ├── style.css
 ├── js/
-│ ├── script.js
-│ └── dateRange.js
+│   ├── script.js
+│   └── dateRange.js
 ├── img/
-│ └── nasa-worm-logo.png
+│   └── nasa-worm-logo.png
 └── README.md
+```
 
 
 ###  Getting Started
