@@ -12,8 +12,12 @@ button.addEventListener("click", async () => {
 
   if (!start || !end) return;
 
-  gallery.innerHTML = "<p>🔄 Loading space photos…</p>";
-
+  gallery.innerHTML = `
+  <div class="loading-placeholder">
+    <img src="img/nasa-logo-meatball.png" alt="NASA logo loading" class="loading-logo" />
+    <p>Loading space photos…</p>
+  </div>
+`;
   const url = `https://api.nasa.gov/planetary/apod?api_key=AoGhDg6AgRiBWQd7VfUateUX29avC6VW1Zxd4DO1&start_date=${start}&end_date=${end}`;
 
   try {
