@@ -2,6 +2,9 @@ const startInput = document.getElementById("startDate");
 const endInput = document.getElementById("endDate");
 const gallery = document.getElementById("gallery");
 const button = document.querySelector("button");
+// Make sure config.js is loaded before this in index.html
+const apiKey = NASA_API_KEY;
+
 
 // Setup NASA range logic
 setupDateInputs(startInput, endInput);
