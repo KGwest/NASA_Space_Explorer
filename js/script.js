@@ -1,10 +1,8 @@
+const apiKey = NASA_API_KEY;
 const startInput = document.getElementById("startDate");
 const endInput = document.getElementById("endDate");
 const gallery = document.getElementById("gallery");
 const button = document.querySelector("button");
-// Make sure config.js is loaded before this in index.html
-const apiKey = NASA_API_KEY;
-
 
 // Setup NASA range logic
 setupDateInputs(startInput, endInput);
@@ -21,7 +19,7 @@ button.addEventListener("click", async () => {
     <p>Loading space photos…</p>
   </div>
 `;
-  const url = `https://api.nasa.gov/planetary/apod?api_key=AoGhDg6AgRiBWQd7VfUateUX29avC6VW1Zxd4DO1&start_date=${start}&end_date=${end}`;
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&start_date=${start}&end_date=${end}`;
 
   try {
     const response = await fetch(url);
